@@ -1,0 +1,39 @@
+- abrir configuração do cypress
+> npx cypress open
+
+1- configurar o cypress para usar javascript ao invés de typescritp
+> const { defineConfig } = require('cypress');
+
+2- configuração para excluir pastas da execução dos testes
+
+3- configurar o padrão de nomes de arquivos que o cypress irá usar.
+
+4- foi usado apenas o "/" porque a url base já foi definida no cypress.config.js
+
+5- o .find() só faz uma busca nos elementos filhos
+
+6- o .contain() encadeado irá realizar a busca nos elementos filhos(igual ao .find())
+
+7- mesmo que o .get() esteja encadeado ele sempre irá realizar a busca em todos os elementos da página
+
+8- é possível encadear os vários métodos de localização de elementos para realizar a busca de um elemento específico
+
+9- o .parents() busca o elemento pai que possui o seletor informado
+
+10- o .as() é usado para criar um alias para o seletor encadeado
+
+11- para acessar um alias tem que colocar o "@" antes do nome é usado .get('@nomeDoAlias')
+
+12- o cypress só pode interagir com elementos ativos e clicáveis da tela, o parâmetro {force: true}, força o elemento a ficar disponível na tela, mesmo que tenha alguma classe fazendo ele ficar invisível ou indisponível para cliques.
+
+13- o cypress não possui laços de repetição, para fazer repetições é necessário criar uma função recursiva
+
+14- o .get() pode ser simplificado separando os seletores por espaço, assim não é necessário usar o .find()
+
+15- o .eq() é usado para retornar um elemento pelo índice dele, pode ser encadeado com um .find() que retorna vários elementos
+
+16- o .wait() é usado para pausar a execução do código, o parâmetro passado é em milisegundos
+
+17- usando o .wrap() é possível converter um array de números em um objeto cypress
+
+18- o .each() é usado para percorrer todos os elementos de uma coleção.

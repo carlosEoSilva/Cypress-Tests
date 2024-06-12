@@ -1,0 +1,4 @@
+1- o .intercept() é para interceptar as requisições para a API, o primeiro parâmetro é o tipo da requisição e o segundo é a URL, o .as() é para criar um apelido para a requisição interceptada.
+ex: cy.intercept('POST', 'https://api.realworld.io/api/articles').as('postArticles')
+
+2- o terceiro parâmetro do intercept é o arquivo com os dados a serem usados para simular a resposta da api. O arquivo .json fica dentro da pasta fixtures
