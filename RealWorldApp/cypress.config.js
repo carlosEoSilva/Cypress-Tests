@@ -10,6 +10,7 @@ module.exports = defineConfig({
     },
 
     baseUrl: 'https://conduit.bondaracademy.com/',
-    specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}'
+    specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}',
+    video: true
   },
 });

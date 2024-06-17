@@ -1,4 +1,17 @@
+NPM SCRIPTS
+- executar os testes apenas pelo terminal
+> npx cypress run
+
+- executar os teste selecionando um navegador
+> npx cypress run --browser [nome do navegador]
+
 1- o .intercept() é para interceptar as requisições para a API, o primeiro parâmetro é o tipo da requisição e o segundo é a URL, o .as() é para criar um apelido para a requisição interceptada.
 ex: cy.intercept('POST', 'https://api.realworld.io/api/articles').as('postArticles')
 
-2- o terceiro parâmetro do intercept é o arquivo com os dados a serem usados para simular a resposta da api. O arquivo .json fica dentro da pasta fixtures
+2- o terceiro parâmetro do intercept é o arquivo com os dados a serem usados para simular a resposta da api. O arquivo .json fica dentro da pasta fixtures.
+
+3- o símbolo '*' no final da url serve para ignorar os valores das variáveis e sempre retornar um OK.
+
+4- usando o .intercept() com o objeto de configuração do routeMatcher()
+
+5- armazenar o token como valor global que pode ser acessado atravéz de .get('@token')
